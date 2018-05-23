@@ -14,27 +14,18 @@
 <script>
 export default{
 	name:"homeswiper",
+    props:{
+        swiperList:Array
+    },
 	data() {
       return {
         swiperOption: {
                 pagination:".swiper-pagination",
-                loop:true
-            },
-        swiperList:[
-        	{
-        		id:"0001",
-        		swiperURL:"https://imgs.qunarzz.com/piao/fusion/1708/f1/ee65a13642c95c02.jpg_750x200_3440fec0.jpg"
-        	},	{
-        		id:"0002",
-        		swiperURL:"https://imgs.qunarzz.com/piao/fusion/1804/dd/269c3dafd51a2502.jpg_750x200_4fb86e3e.jpg"
-        	},  {
-        		id:"0003",
-        		swiperURL:"https://imgs.qunarzz.com/piao/fusion/1804/c4/1cdd28811593b802.jpg_750x200_5fbb7c91.jpg"
-        	},  {
-        		id:"0004",
-        		swiperURL:"https://imgs.qunarzz.com/piao/fusion/1804/5e/fe34170c403d1202.jpg_750x200_40d539e1.jpg"
-        	}
-        ]
+                loop:true,
+                autoplay:true,
+                speed:3000,
+                mousewheelControl: true
+            }
       }
     }
 }

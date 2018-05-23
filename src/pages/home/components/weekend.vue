@@ -4,7 +4,7 @@
 			周末去哪玩儿
 		</div>
 		<ul>
-			<li class="item" v-for="(item,index) of recommendList" :key="item.id">
+			<li class="item" v-for="(item,index) of weekendList" :key="item.id">
 				<div class="item-img-wrapper">
 					<img class="item-img" :src="item.imgURL" alt="">
 				</div>
@@ -79,36 +79,12 @@
 <script>
 export default{
 	name:"homeweekend",
+	props:{
+		weekendList:Array
+	},
 	data(){
 		return{
-			recommendList:[
-				{
-					id:"001",
-					imgURL:"http://img1.qunarzz.com/sight/source/1509/9a/5b27704a304e03.jpg_r_640x214_595073c3.jpg",
-					title:"黄金海岸",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"002",
-					imgURL:"http://img1.qunarzz.com/sight/source/1507/82/06e79c5f8d6e7.jpg_r_640x214_5e63707e.jpg",
-					title:"渔岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"003",
-					imgURL:"http://img1.qunarzz.com/sight/source/1703/e1/93571b553ed1aa.jpg_r_640x214_a7c8c3f6.jpg",
-					title:"黄金海岸",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"004",
-					imgURL:"http://img1.qunarzz.com/sight/source/1509/9a/5b27704a304e03.jpg_r_640x214_595073c3.jpg",
-					title:"了岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"005",
-					imgURL:"http://img1.qunarzz.com/sight/source/1509/9a/5b27704a304e03.jpg_r_640x214_595073c3.jpg",
-					title:"仙螺岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},
-			]
+		
 		}
 	}
 }

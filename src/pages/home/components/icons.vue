@@ -65,55 +65,15 @@
 <script>
 export default{
 	name:"homeicons",
+    props:{
+        iconList:Array
+    },
 	data() {
       	return {
         	swiperOption: {
     			pagination:".swiper-pagination",
-        	},
-        	iconList:[
-        		{
-        			id:"001",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-        			desc:"景点门票"
-        		},	{
-        			id:"002",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-        			desc:"一日游"
-        		},	{
-        			id:"003",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-        			desc:"自然景光"
-        		},	{
-        			id:"004",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-        			desc:"水上乐园"
-        		},	{
-        			id:"005",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png",
-        			desc:"亲子游"
-        		},	{
-        			id:"006",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/27/dac2bcf9added702.png",
-        			desc:"名胜古迹"
-        		},	{
-        			id:"007",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-        			desc:"海滨渔岛"
-        		},	{
-        			id:"008",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png",
-        			desc:"本地游玩"
-        		},	{
-        			id:"009",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-        			desc:"必玩榜单"
-        		},	{
-        			id:"010",
-        			imgURL:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-        			desc:"全部游乐"
-        		},
-        	],
-
+                iconList:this.iconList
+        	}
     	}
     },
     computed:{

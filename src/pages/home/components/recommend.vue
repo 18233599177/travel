@@ -81,36 +81,12 @@
 <script>
 export default{
 	name:"homerecommend",
+	props:{
+		recommendList:Array
+	},
 	data(){
 		return{
-			recommendList:[
-				{
-					id:"001",
-					imgURL:"http://img1.qunarzz.com/sight/p0/201305/31/059a23e51a5cab27c8d65eac.jpg_200x200_f7ba3796.jpg",
-					title:"黄金海岸",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"002",
-					imgURL:"http://img1.qunarzz.com/sight/p0/1707/68/6857311108984e5ea3.img.jpg_200x200_86426f1e.jpg",
-					title:"渔岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"003",
-					imgURL:"http://img1.qunarzz.com/sight/p0/1612/52/52395bcad168baa3.water.jpg_200x200_da526cd0.jpg",
-					title:"黄金海岸",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"004",
-					imgURL:"http://img1.qunarzz.com/sight/p0/201305/31/059a23e51a5cab27c8d65eac.jpg_200x200_f7ba3796.jpg",
-					title:"了岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},	{
-					id:"005",
-					imgURL:"http://img1.qunarzz.com/sight/p0/1408/18/7150b0eb744ab4fc2884583e8f1b81b1.jpg_200x200_c4c4dd49.jpg",
-					title:"仙螺岛",
-					desc:"浪漫的海洋世界唯美的世界"
-				},
-			]
+			
 		}
 	}
 }
