@@ -23,8 +23,7 @@ export default{
                 pagination:".swiper-pagination",
                 loop:true,
                 autoplay:true,
-                speed:3000,
-                mousewheelControl: true
+                speed:3000
             }
       }
     }
