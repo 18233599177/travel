@@ -36,7 +36,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 	.cityheader{
 		width: 100%;
 		height: 1.72rem;
