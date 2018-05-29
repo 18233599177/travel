@@ -18,7 +18,7 @@ export default{
 	}
 	.search>input{
 		display: block;
-		width: 70%;
+		width: 90%;
 		height: .6rem;
 		border-radius: 5px;
 		margin: 0 auto;

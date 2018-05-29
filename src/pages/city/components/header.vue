@@ -23,13 +23,21 @@ export default{
 		}
 	},
 	methods:{
+		// 国内
 		handleClickchurch:function(){
 			this.activechurch={active:"active"}
 			this.activeover={}
+			this.GNactive=true
+			this.GJactive=false
+			this.$emit("GN",this.GNactive,this.GJactive)
 		},
+		// 国际
 		handleClickover(){
 			this.activechurch={}
 			this.activeover={active:"active"}
+			this.GNactive=false
+			this.GJactive=true
+			this.$emit("GJ",this.GNactive,this.GJactive)
 		}
 	}
 

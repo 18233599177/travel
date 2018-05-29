@@ -46,7 +46,7 @@ export default {
 		float: left;
 	}
 	.header-right{
-		width: 1.24rem;
+		width: 1.94rem;
 		float: right;
 		text-align: center;
 		color: #fff
