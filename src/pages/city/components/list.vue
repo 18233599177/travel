@@ -1,6 +1,6 @@
 <template>
 	<div class="list" ref="list">
-		<div ref="content">
+		<div>
 			<div class="area">
 				<div class="title" :GN="GN" :GJ="GJ">热门城市</div>
 				<div class="items" v-if="GN">

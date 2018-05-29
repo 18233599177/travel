@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<cityheader @GN='citylistGN' @GJ='citylistGJ'></cityheader>
-		<citysearch></citysearch>
+		<citysearch :GNcitys="GNcitys" :GJcitys="GJcitys"></citysearch>
 		<citylist :GNhotCitys="GNhotCitys" :GNABC="GNABC" :GNcitys="GNcitys" :GJhotCitys="GJhotCitys" :GJABC="GJABC" :GJcitys="GJcitys" :GN="GN" :GJ="GJ"></citylist>
 	</div>		
 </template>
@@ -37,7 +37,6 @@ export default{
 		},
 		getCityInfoSucc(res){
 			res=res.data
-			console.log(res.GNhotCitys)	
 			if(res.ret){
 				this.GNABC=res.GNABC
 				this.GNcitys=res.GNcitys
