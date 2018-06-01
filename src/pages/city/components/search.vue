@@ -5,7 +5,7 @@
 		</div>
 		<div class="search-content" ref="searchContent" v-show="show">
 			<ul>
-				<li v-for="(value,index) of list" :key="index">{{value}}</li>
+				<li v-for="(value,index) of list" :key="index" @click="handleClick(value)">{{value}}</li>
 				<div class="bottom"></div>	
 			</ul>			
 		</div>		
@@ -26,6 +26,12 @@ export default{
 	props:{
 		GNcitys:Array,
 		GJcitys:Array
+	},
+	methods:{
+		handleClick(city){
+			this.$store.commit("changeCity",city)
+			this.$router.push("/")
+		}
 	},
 	watch:{
 		keywords(){
@@ -72,7 +78,6 @@ export default{
 	},
 	mounted(){
 		this.scroll=new BScroll(this.$refs.searchContent)
-		console.log(this.scroll)
 	}
 }
 </script>

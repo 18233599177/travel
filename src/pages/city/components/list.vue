@@ -4,12 +4,12 @@
 			<div class="area">
 				<div class="title" :GN="GN" :GJ="GJ">热门城市</div>
 				<div class="items" v-if="GN">
-					<div class="hotCity" v-for="(hotCity,index) of GNhotCitys" :key="index">
+					<div class="hotCity" v-for="(hotCity,index) of GNhotCitys" :key="index" @click="handleClick(hotCity.item)">
 						{{hotCity.item}}
 					</div>				
 				</div>
 				<div class="items" v-if="GJ">
-					<div class="hotCity" v-for="(hotCity,index) of GJhotCitys" :key="index">
+					<div class="hotCity" v-for="(hotCity,index) of GJhotCitys" :key="index" @click="handleClick(hotCity.item)">
 						{{hotCity.item}}
 					</div>				
 				</div>
@@ -30,7 +30,7 @@
 			<div class="area" v-for="(items,key) of GNcitys" :key="key" :ref="items.a" v-if="GN">
 				<div class="title">{{items.a}}</div>
 				<div class="items">
-					<div class="city" v-for="(city,index) of items.item" :key="index">
+					<div class="city" v-for="(city,index) of items.item" :key="index"@click="handleClick(city)">
 						{{city}}
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 			<div class="area" v-for="(items,key) of GJcitys" :key="key" :ref="items.a" v-if="GJ">
 				<div class="title">{{items.a}}</div>
 				<div class="items">
-					<div class="city" v-for="(city,index) of items.item" :key="index">
+					<div class="city" v-for="(city,index) of items.item" :key="index"@click="handleClick(city)">
 						{{city}}
 					</div>
 				</div>
@@ -78,6 +78,10 @@ export default{
 		GJhandleClick(e){
 			console.log(e.target.innerText.toUpperCase())
 			this.word=e.target.innerText.toUpperCase()
+		},
+		handleClick(city){
+			this.$store.commit("changeCity",city)
+			this.$router.push("/")
 		}
 	},
 	watch:{
