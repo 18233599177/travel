@@ -44,7 +44,6 @@ export default{
 			if(document.documentElement.scrollTop>60){
 				let opacity=document.documentElement.scrollTop/200
 				document.documentElement.scrollTop>200?opacity=1:opacity
-				console.log(opacity)
 				this.opacityStyle={
 					opacity
 				}
@@ -55,8 +54,11 @@ export default{
 			}
 		}
 	},
-	activated(){
+	activated(){	
 		window.addEventListener("scroll",this.headerScroll)
+	},// 全局事件需要被解绑
+	deactivated(){
+		window.removeEventListener("scroll",this.headerScroll)
 	}
 }
 </script>
