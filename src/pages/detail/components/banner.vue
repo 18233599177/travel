@@ -4,13 +4,13 @@
 			<router-link to="/">
 				<div class="iconfont banner-back">&#xe624;</div>
 			</router-link>	
-			<img src="http://img1.qunarzz.com/sight/p0/1408/18/7150b0eb744ab4fc2884583e8f1b81b1.jpg_600x330_fabdec28.jpg" alt="" class="banner-img">
+			<img :src="bannerImg" alt="" class="banner-img">
 			<div class="banner-info">
-				<div class="banner-title"><p>新澳海底世界（AAAA级景区）</p></div>
-				<div class="banner-icon"><span class="iconfont">&#xe650;</span>39</div>
+				<div class="banner-title"><p :sightName="sightName">{{sightName}}</p></div>
+				<div class="banner-icon" :gallaryImgs="gallaryImgs"><span class="iconfont">&#xe650;</span>{{gallaryImgs.length}}</div>
 			</div>
 		</div>
-		<commongallary :imgs="imgs" v-show="showGallary" @close="handleClickclose"></commongallary>	
+		<commongallary :imgs="gallaryImgs" v-show="showGallary" @close="handleClickclose"></commongallary>	
 	</div>
 	
 </template>
@@ -66,6 +66,12 @@ export default{
 	name:"detailbanner",
 	components:{
 		commongallary
+	},
+	props:{
+		sightName:String,
+		gallaryImgs:Array,
+		bannerImg:String,
+		categoryList:Array
 	},
 	data(){
 		return{

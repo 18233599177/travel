@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div v-for="(item,index) of list" :key="index">
+		<div v-for="(item,index) of categoryList" :key="index">
 			<div class="item-title">
 				<span class="item-title-icon"></span>
 				{{item.title}}
 			</div>		
 			<div v-if="item.children" class="item-children">
-				<detaillist :list="item.children"></detaillist>
+				<detaillist :categoryList="item.children"></detaillist>
 			</div>	
 		</div>
 		
@@ -43,7 +43,7 @@
 export default{
 	name:"detaillist",
 	props:{
-		list:Array
+		categoryList:Array
 	},
 	data(){
 		return{
