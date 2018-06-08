@@ -10,7 +10,9 @@
 				<div class="banner-icon" :gallaryImgs="gallaryImgs"><span class="iconfont">&#xe650;</span>{{gallaryImgs.length}}</div>
 			</div>
 		</div>
-		<commongallary :imgs="gallaryImgs" v-show="showGallary" @close="handleClickclose"></commongallary>	
+		<commonfade>
+			<commongallary :imgs="gallaryImgs" v-show="showGallary" @close="handleClickclose"></commongallary>				
+		</commonfade>
 	</div>
 	
 </template>
@@ -62,10 +64,12 @@
 
 <script>
 import commongallary from "@/common/gallary/gallary"
+import commonfade from "@/common/fade/fade"
 export default{
 	name:"detailbanner",
 	components:{
-		commongallary
+		commongallary,
+		commonfade
 	},
 	props:{
 		sightName:String,

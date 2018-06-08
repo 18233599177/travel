@@ -51,10 +51,10 @@ export default{
 	mounted(){
 		this.getDetailInfo()
 	},
-	// activated(){
-	// 	this.getDetailInfo()
-	// 	console.log(this.$route.params.id)
-	// }
+	activated(){
+		this.getDetailInfo()
+		console.log(this.$route.params.id)
+	}
 }
 </script>
 
